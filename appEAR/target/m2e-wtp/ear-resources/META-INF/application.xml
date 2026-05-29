@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_7.xsd" version="7">
+  <display-name>appEAR</display-name>
+  <module>
+    <web>
+      <web-uri>it.fabiopetricola.springmvc-appBack-1.0.0-SNAPSHOT.war</web-uri>
+      <context-root>/appBack</context-root>
+    </web>
+  </module>
+  <module>
+    <web>
+      <web-uri>it.fabiopetricola.springmvc-appFE-1.0.0-SNAPSHOT.war</web-uri>
+      <context-root>/appFE</context-root>
+    </web>
+  </module>
+</application>
