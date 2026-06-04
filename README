@@ -31,3 +31,8 @@ i tag OpenApi all'oggetto OpenAPI
 Prossimamente configurerò JPA, per chiudere il cerchio.
 
 NOTE.
+Nella mia prima commit, avevo proposto una soluzione che usava jaxrs come "ponte" fra spring e openApi, essendo Swagger già predisposto a lavorare con quest'ultimo. 
+Tuttavia , benché la mappatura dei metadati sia perfettamente funzionante, sussiste un conflitto di path: jaxrs, infatti, è gestito dall'interfaccia Application, ed espone
+il RestApiResource sotto l'application path annotato sopra la classe, mentre i rest controllere da mappare sono gestiti dalla DispatcherServlet di spring
+Il risultato di tale configurazione è che i path dei servizi esposti nella UI risultano mappati l'applicationPath di jaxrs e non sotto quello della Dispatacher. Questo fa
+si che le chiamate dalla UI vadano in perenne 404. 
