@@ -10,7 +10,7 @@ import jakarta.servlet.ServletRegistration;
 /**
  * Classe di configurazione per la definizione della DispatcherServlet di spring senza
  * web.xml e l'abilitazione delle annotation per la gestione delle scansioni spring
- * 
+ * @author Fabio Petricola
  * **/
 public class MvcInizializer implements WebApplicationInitializer{
 

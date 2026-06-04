@@ -1,8 +1,11 @@
 it\fabiopetricola\springmvc\appback\swagger\SwaggerApiServlet.class
+it\fabiopetricola\springmvc\appback\config\OpenApiConfig.class
 it\fabiopetricola\springmvc\appback\config\MvcConfig.class
 it\fabiopetricola\springmvc\appback\config\MvcInizializer.class
 it\fabiopetricola\springmvc\appback\config\PropertiesConfig.class
+it\fabiopetricola\springmvc\appback\api\SwaggerConfigApi.class
 it\fabiopetricola\springmvc\appback\api\EsempioApi.class
 it\fabiopetricola\springmvc\appback\config\SwaggerTrasformerResource.class
+it\fabiopetricola\springmvc\appback\swagger\SwaggerApiServlet$1.class
 it\fabiopetricola\springmvc\appback\service\EsempioService.class
 it\fabiopetricola\springmvc\appback\service\impl\EsempioServiceImpl.class

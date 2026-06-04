@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletRequest;
 /**
  * Trasformerresource custom creato per sovrascrivere gli url di default dei webjars interni allo swagger-ui
  * con gli url esposti dallo swagger applicativo
- * 
+ * @author Fabio Petricola
  * */
 public class SwaggerTrasformerResource implements ResourceTransformer{
 
@@ -26,7 +26,7 @@ public class SwaggerTrasformerResource implements ResourceTransformer{
 			String content = StreamUtils.copyToString(resource.getInputStream(), StandardCharsets.UTF_8);
 		
 			 content = content.replace("https://petstore.swagger.io/v2/swagger.json", 
-                     "/appBack/openapi/openapi.json");
+                     "/appBack/openapi/v3/api-docs");
 			 return new TransformedResource(resource, content.getBytes(StandardCharsets.UTF_8));
 		}
 		return transformerChain.transform(request,resource);

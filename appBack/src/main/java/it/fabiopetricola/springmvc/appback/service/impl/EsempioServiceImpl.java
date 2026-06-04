@@ -6,6 +6,11 @@ import org.springframework.stereotype.Service;
 
 import it.fabiopetricola.springmvc.appback.service.EsempioService;
 import it.fabiopetricola.springmvc.commons.exceptions.ConfigException;
+/**
+ * Implementazione del servizio di business di esempio
+ * @author Fabio Petricola
+ * */
+
 @Service
 public class EsempioServiceImpl implements EsempioService{
 	@Autowired

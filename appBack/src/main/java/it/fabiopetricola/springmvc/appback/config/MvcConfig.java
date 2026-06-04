@@ -7,11 +7,11 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * Classe di configurazione di spring mvc
- * 
+ * @author Fabio Petricola
  * */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages= {"it.fabiopetricola.springmvc.appback.config","it.fabiopetricola.springmvc.appback.service.impl","it.fabiopetricola.springmvc.appback.api"})
+@ComponentScan(basePackages= {"it.fabiopetricola.springmvc.appback.config","it.fabiopetricola.springmvc.appback.service.impl","it.fabiopetricola.springmvc.appback.api","it.fabiopetricola.springmvc.appback.swagger"})
 public class MvcConfig implements WebMvcConfigurer{
 	
 	
@@ -22,4 +22,6 @@ public class MvcConfig implements WebMvcConfigurer{
 		.resourceChain(false)
 		.addTransformer(new SwaggerTrasformerResource());
 	}
+	
+	
 }

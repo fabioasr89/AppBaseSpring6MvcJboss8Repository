@@ -1,7 +1,6 @@
 package it.fabiopetricola.springmvc.appback.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,16 +14,14 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import it.fabiopetricola.springmvc.appback.service.EsempioService;
 import it.fabiopetricola.springmvc.commons.response.ErrorResponse;
 import it.fabiopetricola.springmvc.commons.response.JsonResponse;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
+
 /**
  * Servizio REST di esempio documentato con swagger 3.0
- * 
+ * @author Fabio Petricola
  * */
 @RestController
 @Tag(name = "Servizio di esempio")
 @RequestMapping(value="/example")
-@Path("/example")
 public class EsempioApi {
 	
 	@Autowired
@@ -43,8 +40,6 @@ public class EsempioApi {
 			@ApiResponse(responseCode="500",description = "Errore durante la lettura dei file di properties")
 	})
 	@RequestMapping(value="/example",method=RequestMethod.GET)
-	@Path("/esempio")
-	@GET
 	public JsonResponse<String> esempio(){
 		JsonResponse<String> jsonResponse=new JsonResponse<String>();
 		ErrorResponse error=null;
